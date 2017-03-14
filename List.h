@@ -23,6 +23,9 @@ class List //begin List definition
      /** MISSING OPERATIONS */
      //... fill in ....
 
+     int get(int k);//insert an element at location k
+     void clear();//remove all elements
+
 };//end List definition
 
 #endif

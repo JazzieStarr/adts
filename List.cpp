@@ -27,6 +27,7 @@ int List::size()
     return num_elements;
  }
 
+
 void List::insert(int val, int k)
 {
 	if (k < 1 or k > num_elements +1) //if the location is invalid
@@ -61,8 +62,8 @@ void List::insert(int val, int k)
 
 void List::remove(int k)
 {
-	if (k < 1 or k > num_elements)//if the location is invalid 
-	     throw out_of_range("List::removeAt(...)");//throw an "out_of_range" exception
+	if (k < 1 or k > num_elements)//if the locati,on is invalid 
+	     throw out_of_range("List::remove(...)");//throw an "out_of_range" exception
 	
 	Node* delPtr;
 	
@@ -93,3 +94,30 @@ void List::remove(int k)
 	
 	//Implementations of missing operations
 	
+void List::clear()
+{
+    while (size()!=0)
+    {
+      remove(1);	
+    } 
+}
+
+int List::get(int k)
+{
+   if (k < 1 or k > num_elements) //if the location is invalid
+	     throw out_of_range("List::get(...)");//throw an "out_of_range" exception
+
+   Node *iPtr = frontPtr;
+   if (k==1)
+   {
+     return iPtr->data;
+   }
+   else
+   {
+      for (int i=1;i<k;i++)
+     {
+     iPtr = iPtr->link;
+     } 
+   return iPtr->data;       
+   }
+}
