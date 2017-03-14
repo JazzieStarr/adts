@@ -11,7 +11,7 @@ class Stack
 {
 private:
 
-   List data;
+   List data;//here data is an object
 
 public:
 

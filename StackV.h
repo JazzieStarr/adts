@@ -10,7 +10,7 @@ class Stack
 {
 private:
 
-      vector<int> data;
+      vector<int> data; //data is the name of the 
   
 
 public:
@@ -22,15 +22,15 @@ public:
    // No d'tor needs to be declared
    // The vector "knows" how to destroy itself
 
-   int size();
+   int size(); //return the elements in the stack
 
-   void push(int);
+   void push(int);//insert element at top of stack
 
-   void pop();
+   void pop();//remove element from top of stack
 
-   int top();
+   int top();//view element at top of stack
 
-   void clear();
+   void clear(); //remove all elements
 
 };
 

@@ -31,7 +31,7 @@ int List::size()
 void List::insert(int val, int k)
 {
 	if (k < 1 or k > num_elements +1) //if the location is invalid
-	     throw out_of_range("List::insertAt(...)");//throw an "out_of_range" exception
+	     throw out_of_range("List::insert(...)");//throw an "out_of_range" exception
 	
 	
 	Node* newPtr = new Node{val};
@@ -62,7 +62,7 @@ void List::insert(int val, int k)
 
 void List::remove(int k)
 {
-	if (k < 1 or k > num_elements)//if the locati,on is invalid 
+	if (k < 1 or k > num_elements)//if the location is invalid 
 	     throw out_of_range("List::remove(...)");//throw an "out_of_range" exception
 	
 	Node* delPtr;
